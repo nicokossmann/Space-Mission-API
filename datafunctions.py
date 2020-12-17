@@ -5,9 +5,14 @@ def load_data():
     data['Datum']  = pd.to_datetime(data['Datum'])
     data['Date'] = [dt.date() for dt in data['Datum']]
     data['Time'] = [dt.time() for dt in data['Datum']]
+    data['Carrierrocket'] = [details.split("|")[0].strip() for details in data['Detail']]
+    data['Cargo'] = [details.split("|")[1].strip() for details in data['Detail']]
     data['Cost'] = data[" Rocket"]
-    data = data.drop(columns=["Unnamed: 0", "Unnamed: 0.1", "Datum", " Rocket"])
+    data = data.drop(columns=["Unnamed: 0", "Unnamed: 0.1", "Datum", " Rocket", "Detail"])
     return data
+
+def get_all(data):
+    return data.to_json(orient="records", date_format='iso')
 
 def get_by_name(data, name):
     results = data[data['Company Name'] == name]

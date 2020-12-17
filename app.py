@@ -4,13 +4,13 @@ from flask import jsonify
 from flask import Response
 import datafunctions as data
 
-
 app = Flask(__name__)
 df = data.load_data()
 
 @app.route('/', methods=['GET'])
 def index():
-    return '<h1>Welcome to Space-Mission-API<h1>'
+    results = data.get_all(df)
+    return Response(results, mimetype='application/json')
 
 @app.route('/organisation', methods=['GET'])
 def data_of_name():
