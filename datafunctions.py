@@ -2,11 +2,12 @@ import pandas as pd
 
 def load_data():
     data = pd.read_csv('Space_Corrected.csv', sep=',')
+    data['Carrierrocket'] = [details.split("|")[0].strip() for details in data['Detail']]
+    data['Cargo'] = [details.split("|")[1].strip() for details in data['Detail']]
+    data['Location'] = [list(map(str.strip, location.split(","))) for location in data['Location']]
     data['Datum']  = pd.to_datetime(data['Datum'])
     data['Date'] = [dt.date() for dt in data['Datum']]
     data['Time'] = [dt.time() for dt in data['Datum']]
-    data['Carrierrocket'] = [details.split("|")[0].strip() for details in data['Detail']]
-    data['Cargo'] = [details.split("|")[1].strip() for details in data['Detail']]
     data['Cost'] = data[" Rocket"]
     data = data.drop(columns=["Unnamed: 0", "Unnamed: 0.1", "Datum", " Rocket", "Detail"])
     return data
