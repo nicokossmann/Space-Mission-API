@@ -1,1 +1,1 @@
-# Space-Mission-API :rocket:
+# Space-Mission-API
