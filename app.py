@@ -4,8 +4,8 @@ from flask import jsonify
 from flask import Response
 import datafunctions as data
 
-app = Flask(__name__)
 df = data.load_data()
+app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
