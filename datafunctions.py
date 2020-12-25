@@ -28,3 +28,20 @@ def get_by_year(data, year):
     ts = pd.to_datetime(year)
     results = data[pd.DatetimeIndex(data['Date']).year == ts.year]
     return results.to_json(orient="records", date_format='iso')
+
+def get_by_from(data, ge):
+    ts = pd.to_datetime(ge)
+    results = data[pd.DatetimeIndex(data['Date']).year >= ts.year]
+    return results.to_json(orient="records", date_format='iso')
+
+def get_by_to(data, le):
+    ts = pd.to_datetime(le)
+    results = data[pd.DatetimeIndex(data['Date']).year <= ts.year]
+    return results.to_json(orient="records", date_format='iso')
+
+def get_by_from_to(data, ge, le):
+    ts_ge = pd.to_datetime(ge)
+    ts_le = pd.to_datetime(le)
+    results = data[pd.DatetimeIndex(data['Date']).year >= ts_ge.year]
+    results = results[pd.DatetimeIndex(results['Date']).year <= ts_le.year]
+    return results.to_json(orient="records", date_format='iso')
