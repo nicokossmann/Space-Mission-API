@@ -98,29 +98,29 @@ This project was intended to get into Flask and to develop my skills in the fiel
 
 * Get all Space missions from 1957 to 2020:
     ```url
-    https://space-mission-api.herokuapp.com/
+    space-mission-api.herokuapp.com/
     ```
 * **Missiondetails:**
 
     * Get missions by organisationname *NASA*:
     ```url
-        https://space-mission-api.herokuapp.com/missions?organisation=NASA
+        space-mission-api.herokuapp.com/missions?organisation=NASA
     ```
     * Get mission by missionname *Apollo 11*:
     ```url
-        https://space-mission-api.herokuapp.com/missions?mission=Apollo%2011
+        space-mission-api.herokuapp.com/missions?mission=Apollo%2011
     ```
     * Get missions by mission status *Success*:
     ```url
-        https://space-mission-api.herokuapp.com/missions?missionsatus=Success
+        space-mission-api.herokuapp.com/missions?missionsatus=Success
     ```
     * Get missions by rocketname *Saturn V*:
     ```url
-        https://space-mission-api.herokuapp.com/missions?rocket=Saturn%20V
+        space-mission-api.herokuapp.com/missions?rocket=Saturn%20V
     ```
     * Get missions by rocket status *active*:
     ```url
-        https://space-mission-api.herokuapp.com/missions?rocketstatus=StatusActive
+        space-mission-api.herokuapp.com/missions?rocketstatus=StatusActive
     ```
     * Get missions with costs more than *100 million $*:
     ```url
@@ -128,11 +128,11 @@ This project was intended to get into Flask and to develop my skills in the fiel
     ```
     * Get missions with *unknown costs*:
     ```url
-        https://space-mission-api.herokuapp.com/missions/costs?less=1.0
+        space-mission-api.herokuapp.com/missions/costs?less=1.0
     ```
     * Get missions with costs less than *100 million $*:
     ```url
-        https://space-mission-api.herokuapp.com/missions/costs?less=100.0
+        space-mission-api.herokuapp.com/missions/costs?less=100.0
     ```
 
 * **Date:**
@@ -140,34 +140,34 @@ This project was intended to get into Flask and to develop my skills in the fiel
 
     * Get mission by date *2020-08-07*:
     ```url
-        https://space-mission-api.herokuapp.com/date?date=2020-08-07
+        space-mission-api.herokuapp.com/date?date=2020-08-07
     ```
     * Get missions by year *1969*:
     ```url
-        https://space-mission-api.herokuapp.com/date?year=1969
+        space-mission-api.herokuapp.com/date?year=1969
     ```
     * Get missions since year *2019*:
     ```url
-        https://space-mission-api.herokuapp.com/date?from=2019
+        space-mission-api.herokuapp.com/date?from=2019
     ```
     * Get missions to year *1958*:
     ```url
-        https://space-mission-api.herokuapp.com/date?to=1958
+        space-mission-api.herokuapp.com/date?to=1958
     ```
     * Get missions from *2018* to *2019*:
     ```url
-        https://space-mission-api.herokuapp.com/date/2018/2019
+        space-mission-api.herokuapp.com/date/2018/2019
     ```
 
 * **Location:**
 
     * Get missions by Spacecenter *Kennedy Space Center*:
     ```url
-        https://space-mission-api.herokuapp.com/spacecenter=Kennedy%20Space%20Center
+        space-mission-api.herokuapp.com/location?spacecenter=Kennedy%20Space%20Center
     ```
     * Get missions by Country *USA*:
     ```url
-        https://space-mission-api.herokuapp.com/location?country=USA
+        space-mission-api.herokuapp.com/location?country=USA
     ```
 
 ## Acknowledgements
