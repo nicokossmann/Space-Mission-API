@@ -31,7 +31,7 @@ This project was intended to get into Flask and to develop my skills in the fiel
     * Location
 
 * Return JSON-objects like:
-```json
+    ```json
     [
         {
             "Organisation": "US Navy",
@@ -39,7 +39,7 @@ This project was intended to get into Flask and to develop my skills in the fiel
             "Mission Status": "Failure",
             "Carrierrocket": "Vanguard",
             "Rocket Status": "StatusRetired",
-            "Costs": "nan",
+            "Costs": "0",
             "Date": "1957-12-06T00:00:00.000Z",
             "Time": "16:44:00",
             "Launch Location": [
@@ -55,7 +55,7 @@ This project was intended to get into Flask and to develop my skills in the fiel
             "Mission Status": "Success",
             "Carrierrocket": "Sputnik 8K71PS",
             "Rocket Status": "StatusRetired",
-            "Costs": "nan",
+            "Costs": "0",
             "Date": "1957-11-03T00:00:00.000Z",
             "Time": "02:30:00",
             "Launch Location": [
@@ -70,7 +70,7 @@ This project was intended to get into Flask and to develop my skills in the fiel
             "Mission Status": "Success",
             "Carrierrocket": "Sputnik 8K71PS",
             "Rocket Status": "StatusRetired",
-            "Costs": "nan",
+            "Costs": "0",
             "Date": "1957-10-04T00:00:00.000Z",
             "Time": "19:28:00",
             "Launch Location": [
@@ -80,7 +80,7 @@ This project was intended to get into Flask and to develop my skills in the fiel
             ]
         }
     ]
-```
+    ```
 
 ### Build with
 

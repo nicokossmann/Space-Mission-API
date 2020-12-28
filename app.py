@@ -42,7 +42,7 @@ def data_of_budget():
         results = data.get_by_less(df, less)
     return Response(results, mimetype='application/json')
 
-@app.route('/dates', methods=['GET'])
+@app.route('/date', methods=['GET'])
 def data_of_date():
     date = request.args.get('date')
     year = request.args.get('year')
@@ -58,7 +58,7 @@ def data_of_date():
         results = data.get_by_to(df, to_year)
     return Response(results, mimetype='application/json')
 
-@app.route('/dates/<from_year>/<to_year>', methods=['GET'])
+@app.route('/date/<from_year>/<to_year>', methods=['GET'])
 def data_of_date_intervall(from_year=None, to_year=None):
     if from_year is not None and to_year is not None:
         results = data.get_by_from_to(df, from_year, to_year)
