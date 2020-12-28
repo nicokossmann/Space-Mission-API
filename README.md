@@ -1,6 +1,6 @@
 # Space-Mission-API :rocket:
 
-![Github License](https://img.shields.io/badge/license-MIT-green)
+![Python 3.8.5](https://img.shields.io/badge/python-3.8.5-blue.svg)
 
 Rest-API for Space missions since 1957
 
@@ -13,8 +13,7 @@ Rest-API for Space missions since 1957
     * [Coming soon](#coming-soon)
 * [Usage](#usage)
     * [**Getting Started**](#getting-started)
-    * [Clone](#clone)
-* [Lisense](#coming-soon)
+* [Acknowledgements](#acknowledgements)
 
 ## Motivation
 
@@ -28,10 +27,10 @@ This project was intended to get into Flask and to develop my skills in the fiel
 
 * Requests about:
     * Missiondetails:
-    * Dates
-    * Locations
+    * Date
+    * Location
 
-* Response JSON-objects like:
+* Return JSON-objects like:
 ```json
     [
         {
@@ -85,9 +84,9 @@ This project was intended to get into Flask and to develop my skills in the fiel
 
 ### Build with
 
-* Flask
-* Pandas
-* Gunicorn
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [Pandas](https://pandas.pydata.org/)
+* [Gunicorn](https://gunicorn.org/)
 
 ### Coming soon
 
@@ -95,65 +94,82 @@ This project was intended to get into Flask and to develop my skills in the fiel
 
 ## Usage
 
-### Get started
+### Getting Started
 
 * Get all Space missions from 1957 to 2020:
-```console
+    ```url
     https://space-mission-api.herokuapp.com/
-```
-* Missiondetails:
+    ```
+* **Missiondetails:**
 
-    * Get missions by organisationname:
-    ```console
-        https://space-mission-api.herokuapp.com/mission?organisation=NASA
+    * Get missions by organisationname *NASA*:
+    ```url
+        https://space-mission-api.herokuapp.com/missions?organisation=NASA
     ```
-    * Get mission by missionname:
-    ```console
-        https://space-mission-api.herokuapp.com/mission?mission=Apollo%2011
+    * Get mission by missionname *Apollo 11*:
+    ```url
+        https://space-mission-api.herokuapp.com/missions?mission=Apollo%2011
     ```
-    * Get missions by mission status:
-    ```console
-        https://space-mission-api.herokuapp.com/mission?missionsatus=Success
+    * Get missions by mission status *Success*:
+    ```url
+        https://space-mission-api.herokuapp.com/missions?missionsatus=Success
     ```
-    * Get missions by rocketname:
-    ```console
-        https://space-mission-api.herokuapp.com/mission?rocket=Saturn%20V
+    * Get missions by rocketname *Saturn V*:
+    ```url
+        https://space-mission-api.herokuapp.com/missions?rocket=Saturn%20V
     ```
-    * Get missions by rocket status:
-    ```console
-        https://space-mission-api.herokuapp.com/mission?rocket=StatusRetired
+    * Get missions by rocket status *active*:
+    ```url
+        https://space-mission-api.herokuapp.com/missions?rocketstatus=StatusActive
+    ```
+    * Get missions with costs more than *100 million $*:
+    ```url
+        https://space-mission-api.herokuapp.com/missions/costs?more=100.0
+    ```
+    * Get missions with *unknown costs*:
+    ```url
+        https://space-mission-api.herokuapp.com/missions/costs?less=1.0
+    ```
+    * Get missions with costs less than *100 million $*:
+    ```url
+        https://space-mission-api.herokuapp.com/missions/costs?less=100.0
     ```
 
-* Missioncosts:
-* Date:
+* **Date:**
 
-    * Get mission by date:
-    ```console
+
+    * Get mission by date *2020-08-07*:
+    ```url
         https://space-mission-api.herokuapp.com/date?date=2020-08-07
     ```
-    * Get missions by year:
-    ```console
+    * Get missions by year *1969*:
+    ```url
         https://space-mission-api.herokuapp.com/date?year=1969
     ```
-    * Get missions since year:
-    ```console
+    * Get missions since year *2019*:
+    ```url
         https://space-mission-api.herokuapp.com/date?from=2019
     ```
-    * Get missions to year:
-    ```console
+    * Get missions to year *1958*:
+    ```url
         https://space-mission-api.herokuapp.com/date?to=1958
     ```
-    * Get missions between years:
-    ```console
+    * Get missions from *2018* to *2019*:
+    ```url
         https://space-mission-api.herokuapp.com/date/2018/2019
     ```
 
-### Clone
+* **Location:**
 
-## Lisense
-
-This project is licensed under the [MIT License](https://github.com/this/project/blob/master/LICENSE)
+    * Get missions by Spacecenter *Kennedy Space Center*:
+    ```url
+        https://space-mission-api.herokuapp.com/spacecenter=Kennedy%20Space%20Center
+    ```
+    * Get missions by Country *USA*:
+    ```url
+        https://space-mission-api.herokuapp.com/location?country=USA
+    ```
 
 ## Acknowledgements
 
-* [Link to Kaggle dataset](https://www.kaggle.com/agirlcoding/all-space-missions-from-1957)
+* [Kaggle dataset](https://www.kaggle.com/agirlcoding/all-space-missions-from-1957)

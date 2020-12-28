@@ -2,6 +2,7 @@ import pandas as pd
 
 def load_data():
     data = pd.read_csv('Space_Corrected.csv', sep=',')
+    data = data.fillna(0)
     data['Organisation'] = data['Company Name']
     data['Mission'] = [details.split("|")[1].strip() for details in data['Detail']]
     data['Mission Status'] = data['Status Mission'] 
@@ -18,7 +19,7 @@ def load_data():
 def get_all(data):
     return data.to_json(orient="records", date_format='iso')
 
-def get_by_string(data, string, value):
+def get_by_missiondetails(data, string, value):
     results = data[data[string] == value]
     return results.to_json(orient="records", date_format='iso')
 
@@ -49,20 +50,15 @@ def get_by_from_to(data, ge, le):
     results = results[pd.DatetimeIndex(results['Date']).year <= ts_le.year]
     return results.to_json(orient="records", date_format='iso')
     
-#Funktioniert noch nicht
 def get_by_more(data, more):
-    data['Costs'] = data['Costs'].astype(float)
-    print(data['Costs'].dtype)
-    results = data.where(data['Costs'] > float(more))
+    results = data[data['Costs'].astype(float) > float(more)]
     return results.to_json(orient="records", date_format='iso')
 
-#Funktioniert noch nicht
 def get_by_less(data, less):
-    results = []
+    results = data[data['Costs'].astype(float) < float(less)]
     return results.to_json(orient="records", date_format='iso')
 
-def get_by_spacecenter(data, center):
-    pass
+def get_by_locationdetails(data, string, index):
+    results = data[data['Launch Location'].apply(lambda x: x[index] == str(string))]
+    return results.to_json(orient="records", date_format='iso')
 
-def get_by_country(data, country):
-    pass
