@@ -1,6 +1,6 @@
 # Space-Mission-API :rocket:
 
-![Python 3.8.5](https://img.shields.io/badge/python-3.8.5-blue.svg)
+![Python 3.9.6](https://img.shields.io/badge/python-3.9.6-blue.svg)
 
 Rest-API for Space missions since 1957
 
