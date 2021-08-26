@@ -6,14 +6,16 @@ Rest-API for Space missions since 1957
 
 ## Table of Contents
 
-* [Motivation](#motivation)
-* [About the Project](#about-the-project)
-    * [Features](#features)
-    * [Build with](#build-with)
-    * [Coming soon](#coming-soon)
-* [Usage](#usage)
-    * [**Getting Started**](#getting-started)
-* [Acknowledgements](#acknowledgements)
+- [Space-Mission-API :rocket:](#space-mission-api-rocket)
+  - [Table of Contents](#table-of-contents)
+  - [Motivation](#motivation)
+  - [About the Project](#about-the-project)
+    - [Features](#features)
+    - [Build with](#build-with)
+    - [Coming soon](#coming-soon)
+  - [Usage](#usage)
+    - [Getting Started](#getting-started)
+  - [Acknowledgements](#acknowledgements)
 
 ## Motivation
 
@@ -34,52 +36,53 @@ This project was intended to get into Flask and to develop my skills in the fiel
     ```json
     [
         {
-            "Organisation": "US Navy",
-            "Mission": "Vanguard TV3",
-            "Mission Status": "Failure",
-            "Carrierrocket": "Vanguard",
-            "Rocket Status": "StatusRetired",
-            "Costs": "0",
-            "Date": "1957-12-06T00:00:00.000Z",
-            "Time": "16:44:00",
+            "Organisation": "SpaceX",
+            "Mission": "Starlink V1 L9 & BlackSky",
+            "Mission Status": "Success",
+            "Carrierrocket": "Falcon 9 Block 5",
+            "Rocket Status": "StatusActive",
+            "Costs": "50.0",
+            "Date": "2020-08-07",
+            "Time": "05:12:00",
             "Launch Location": [
-                "LC-18A",
-                "Cape Canaveral AFS",
+                "LC-39A",
+                "Kennedy Space Center",
                 "Florida",
                 "USA"
             ]
         },
         {
-            "Organisation": "RVSN USSR",
-            "Mission": "Sputnik-2",
+            "Organisation": "CASC",
+            "Mission": "Gaofen-9 04 & Q-SAT",
             "Mission Status": "Success",
-            "Carrierrocket": "Sputnik 8K71PS",
-            "Rocket Status": "StatusRetired",
-            "Costs": "0",
-            "Date": "1957-11-03T00:00:00.000Z",
-            "Time": "02:30:00",
+            "Carrierrocket": "Long March 2D",
+            "Rocket Status": "StatusActive",
+            "Costs": "29.75",
+            "Date": "2020-08-06",
+            "Time": "04:01:00",
             "Launch Location": [
-                "Site 1/5",
-                "Baikonur Cosmodrome",
-                "Kazakhstan"
+                "Site 9401 (SLS-2)",
+                "Jiuquan Satellite Launch Center",
+                "China"
             ]
         },
         {
-            "Organisation": "RVSN USSR",
-            "Mission": "Sputnik-1",
+            "Organisation": "SpaceX",
+            "Mission": "150 Meter Hop",
             "Mission Status": "Success",
-            "Carrierrocket": "Sputnik 8K71PS",
-            "Rocket Status": "StatusRetired",
+            "Carrierrocket": "Starship Prototype",
+            "Rocket Status": "StatusActive",
             "Costs": "0",
-            "Date": "1957-10-04T00:00:00.000Z",
-            "Time": "19:28:00",
+            "Date": "2020-08-04",
+            "Time": "23:57:00",
             "Launch Location": [
-                "Site 1/5",
-                "Baikonur Cosmodrome",
-                "Kazakhstan"
+                "Pad A",
+                "Boca Chica",
+                "Texas",
+                "USA"
             ]
         }
-    ]
+    ]       
     ```
 
 ### Build with
