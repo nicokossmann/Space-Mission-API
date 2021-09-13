@@ -6,8 +6,6 @@ Rest-API for Space missions since 1957
 
 ## Table of Contents
 
-- [Space-Mission-API :rocket:](#space-mission-api-rocket)
-  - [Table of Contents](#table-of-contents)
   - [Motivation](#motivation)
   - [About the Project](#about-the-project)
     - [Features](#features)
