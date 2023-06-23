@@ -170,7 +170,6 @@ This project was intended to get into Flask and to develop my skills in the fiel
     ```url
         https://space-mission-api.herokuapp.com/location?country=USA
     ```
-
 ## Acknowledgements
 
 * [Kaggle dataset](https://www.kaggle.com/agirlcoding/all-space-missions-from-1957)
